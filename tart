@@ -1,0 +1,23 @@
+[33mcommit 1756d8c94f13be1b7464388bcfaed84ed08a44fa[m[33m ([m[1;36mHEAD -> [m[1;32mheader[m[33m, [m[1;31morigin/header[m[33m)[m
+Author: David Gluzman <david.m.gluzman@gmail.com>
+Date:   Wed May 17 14:19:11 2023 -0400
+
+    start header branch and initiate html structure
+
+[33mcommit 400dbaa8770685636c072e81218a6b99614deb59[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: David Gluzman <david.m.gluzman@gmail.com>
+Date:   Tue May 16 21:59:29 2023 -0400
+
+    add component files
+
+[33mcommit d1435d04a5aebceecc3b3725ee4a6ac148a4c139[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: David Gluzman <david.m.gluzman@gmail.com>
+Date:   Tue May 16 21:47:04 2023 -0400
+
+    create most of the skeleton for the project
+
+[33mcommit b98c859fe8b5c854cbf36b4692c779a5a1e14a47[m
+Author: David Gluzman <david.m.gluzman@gmail.com>
+Date:   Tue May 16 14:48:15 2023 -0400
+
+    Initialize project using Create React App

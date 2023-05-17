@@ -1,5 +1,5 @@
 import "./Component.scss";
-import Header from "./Header";
+import Header from "../Header/Header";
 // import Hero from "../Hero/Hero";
 // import Heading from "../Heading/Heading";
 // import underHeadingCounters from "./underHeadingCounters";
