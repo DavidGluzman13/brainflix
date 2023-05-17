@@ -2,7 +2,7 @@ function Header() {
   return (
     <header class="header">
       <a>
-        <img src="../" />
+        <img src="" />
       </a>
     </header>
   );

@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./app.scss";
-import components from "./components/Component/Component";
+import Component from "./components/Component/Component";
 
 function App() {
-  return <components />;
+  return <Component />;
 }
 
 export default App;
