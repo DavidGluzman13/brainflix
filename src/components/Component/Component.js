@@ -1,20 +1,12 @@
 import "./Component.scss";
 import Header from "../Header/Header";
-// import Hero from "../Hero/Hero";
-// import Heading from "../Heading/Heading";
-// import underHeadingCounters from "./underHeadingCounters";
-// import commentSection from "./commentSection";
-// import nextVideo from "./nextVideo";
+import CommentSection from "../commentSection/commentSection";
 
 function Component() {
   return (
     <>
       <Header />
-      {/* <Hero />
-      <Heading />
-      <underHeadingCounters />
-      <commentSection />
-      <nextVideo /> */}
+      <CommentSection />
     </>
   );
 }
