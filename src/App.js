@@ -23,11 +23,6 @@ function App() {
   // declare a state variable for future reference
   const [videoList, setVideoList] = useState(jsonVideos);
 
-  // const handleClick = (event, videoId) => {
-  //   event.preventDefault();
-  //   changeSelectedVideo(videoId);
-  // };
-
   const filteredVideos = videoList.filter((video) => {
     return video.id !== selectedVideo.id;
   });
@@ -37,7 +32,7 @@ function App() {
       <Header />
       <VideoPlayer selectedVideo={selectedVideo} />
       <VideoDetails selectedVideo={selectedVideo} />
-      <CommentSection />
+      <CommentSection selectedVideo={selectedVideo} />
       <NextVideo
         filteredVideos={filteredVideos}
         changeSelectedVideo={changeSelectedVideo}

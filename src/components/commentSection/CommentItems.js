@@ -1,10 +1,6 @@
-import "./CommentDetails.scss";
+import "./CommentItems.scss";
 
-
-const CommentDetails = ({ name, timestamp, comment }) => {
-  //it needs to be from the current video being watched.
-
-
+const CommentItems = ({ name, timestamp, comment }) => {
   return (
     <section className="comment-details">
       <div className="comment-details__image"></div>
@@ -17,4 +13,4 @@ const CommentDetails = ({ name, timestamp, comment }) => {
   );
 };
 
-export default CommentDetails;
+export default CommentItems;

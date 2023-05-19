@@ -1,35 +1,46 @@
 import "./CommentSection.scss";
 import comments from "../../data/video-details.json";
+import CommentItems from "./CommentItems";
+import avatarIcon from "../../assets/images/Mohan-muruge.jpg";
+
 import { useState } from "react";
 
-export default function CommentSection() {
-  // input handleClick function
-  const [userComments, setSelectedVideo] = useState(comments);
-
+export default function CommentSection({ selectedVideo }) {
   return (
     <div>
       <main className="comment">
-        <h1 className="comment__title" commentCount={comments.length} />
-        {/* replace commentCount */}
-        <div className="comment__name-container">
-          <div className="comment__image"></div>
-          <form className="comment__input-container">
-            <div className="comment__input-text-container">
-              <h5 className="comment__input-container--text">
+        <h3 className="comment__title">
+          {selectedVideo.comments.length} Comments
+        </h3>
+        <div className="comment__container">
+          <img className="comment__container-image" src={avatarIcon} alt="muhan murag" />
+          <form className="comment__container-form">
+            <div className="input">
+              <label className="input__label">
                 JOIN THE CONVERSATION
-              </h5>
-              {/* <CommentDetails
-                name={comment.name}
-                timestamp={comment.timestamp}
-                comment={comment.comment}
-              /> It might needs to be CommentContent */}
+                <textarea
+                  name="comment"
+                  className="input__label-textarea"
+                  placeholder="Add a new comment"
+                />
+              </label>
             </div>
-            <div className="comment__button-container">
-              <button className="comment__button">COMMENT</button>
-            </div>
+            <button className="comment__container-form-button">COMMENT</button>
           </form>
         </div>
-        <div className="comment__default-comment"> {CommentSection}</div>
+        <div className="comment-list">
+          {" "}
+          {selectedVideo.comments.map((comment) => {
+            return (
+              <CommentItems
+                name={comment.name}
+                comment={comment.comment}
+                timestamp={comment.timestamp}
+                key={comment.id}
+              />
+            );
+          })}
+        </div>
       </main>
     </div>
   );
