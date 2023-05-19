@@ -4,6 +4,7 @@ import videos from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import CommentSection from "./components/CommentSection/CommentSection";
 import { useState } from "react";
+import NextVideo from "./components/NextVideo/NextVideo";
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
@@ -23,6 +24,10 @@ function App() {
     <>
       <Header />
       <CommentSection />
+      <NextVideo
+        videos={filteredVideos}
+        changeSelectedVideo={changeSelectedVideo}
+      />
     </>
   );
 }

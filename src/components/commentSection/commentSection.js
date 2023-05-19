@@ -1,5 +1,5 @@
 import "./CommentSection.scss";
-import CommentDetails from "./CommentDetails";
+import CommentDetails from "./CommentItems";
 import CommentContent from "./CommentContent";
 import comments from "../../data/video-details.json";
 import { useState } from "react";
