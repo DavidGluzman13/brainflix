@@ -1,23 +1,19 @@
-function NextVideo() {
-  const handleClick = (event, videoId) => {
-    event.preventDefault();
-    changeSelectedPlant(videoId);
-  };
-
+function NextVideo({ filteredVideos, changeSelectedVideo }) {
   return (
     <nav className="videoNav">
       <ul>
-        {videos.map((video) => {
+        {filteredVideos.map((video) => {
           return (
-            <li>
-              <a
-                onClick={(event) => {
-                  handleClick(event, video.id);
-                }}
-                href="/"
-              >
-                {video.name}
-              </a>
+            <li
+              onClick={() => {
+                changeSelectedVideo(video.id);
+              }}
+              href="/"
+            >
+              <h3>{video.title}</h3>
+              <p>{video.channel}</p>
+              <img src={video.image}
+              ></img>
             </li>
           );
         })}
