@@ -1,33 +1,18 @@
-import "./commentSection.scss";
+import "./CommentSection.scss";
+import CommentDetails from "./CommentDetails";
+import CommentContent from "./CommentContent";
 import comments from "../../data/video-details.json";
 import { useState } from "react";
 
-//comment counter that will change according to the amount of comments
-function cmtCount(props) {
-  return (
-    <div>
-      <span>{props.commentCount ?? 0} Comments</span>
-    </div>
-  );
-}
-
 export default function CommentSection() {
-  const [selectedCommentID, setSelectedCommentID] = useState(null);
-
-  const handleSelectedComment = (id) => {
-    if (id === selectedCommentID) {
-      setSelectedCommentID(null);
-    } else {
-      setSelectedCommentID(id);
-    }
-  };
-
-  //Function start
+  // input handleClick function
+  const [userComments, setSelectedVideo] = useState(comments);
 
   return (
     <div>
       <main className="comment">
         <h1 className="comment__title" commentCount={comments.length} />
+        {/* replace commentCount */}
         <div className="comment__name-container">
           <div className="comment__image"></div>
           <form className="comment__input-container">
@@ -35,13 +20,11 @@ export default function CommentSection() {
               <h5 className="comment__input-container--text">
                 JOIN THE CONVERSATION
               </h5>
-              <textarea
-                className="comment__text-container comment__text-container--one"
-                name="name"
-                rows="10"
-                cols="50"
-                placeholder="Add a new comment"
-              ></textarea>
+              {/* <CommentDetails
+                name={comment.name}
+                timestamp={comment.timestamp}
+                comment={comment.comment}
+              /> It might needs to be CommentContent */}
             </div>
             <div className="comment__button-container">
               <button className="comment__button">COMMENT</button>
