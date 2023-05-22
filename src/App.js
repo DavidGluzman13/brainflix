@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-      <VideoPlayer selectedVideo={selectedVideo} />
+      <VideoPlayer className="VideoPlayer" selectedVideo={selectedVideo} />
       <VideoDetails selectedVideo={selectedVideo} />
       <CommentSection selectedVideo={selectedVideo} />
       <NextVideo

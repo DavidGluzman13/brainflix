@@ -3,7 +3,6 @@ import comments from "../../data/video-details.json";
 import CommentItems from "./CommentItems";
 import avatarIcon from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-
 import { useState } from "react";
 
 export default function CommentSection({ selectedVideo }) {
@@ -23,7 +22,7 @@ export default function CommentSection({ selectedVideo }) {
             <div className="input">
               <label className="input__label">
                 JOIN THE CONVERSATION
-                <textarea
+                <input
                   name="comment"
                   className="input__label-textarea"
                   placeholder="Add a new comment"

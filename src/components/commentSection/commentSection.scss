@@ -4,7 +4,7 @@
 
 .comment {
   //put comment section styling
-//   margin: 0 1rem;
+  //   margin: 0 1rem;
   box-sizing: border-box;
 
   &__title {
@@ -13,6 +13,8 @@
 
   &__container {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 
     &-image {
       width: 2.5rem;
@@ -21,6 +23,15 @@
       border-radius: 50%;
       object-fit: cover;
       flex: none;
+
+      @include tablet {
+        align-self: flex-end;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-form {
+      width: 100%;
     }
   }
 }
@@ -30,10 +41,22 @@
   flex-direction: column;
   width: 100%;
 
+  @include tablet {
+    flex-direction: row;
+    margin: 1rem 0;
+    justify-content: space-between;
+  }
+
   &__label {
     color: #afafaf;
     font-size: 0.9rem;
     font-weight: 600;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      padding-right: 1rem;
+    }
 
     &-textarea {
       width: 100%;
@@ -44,6 +67,21 @@
       padding: 0.5rem 0 0 0.5rem;
       font-family: sans-serif;
       color: #323232;
+      box-sizing: border-box;
+
+      padding-bottom: 5rem;
+      position: relative;
+
+      &::placeholder {
+        position: absolute;
+        top: 1;
+      }
+
+      @include tablet {
+        padding-bottom: 0;
+        height: 2.2rem;
+        width: 30rem;
+      }
     }
   }
 
@@ -69,6 +107,13 @@
       font-size: 0.8rem;
       font-weight: 400;
       width: 100%;
+      margin: 0;
+    }
+
+    @include tablet {
+      height: 2.2rem;
+      width: 10rem;
+      align-self: flex-end;
       margin: 0;
     }
   }

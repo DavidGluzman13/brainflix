@@ -2,20 +2,27 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fonts" as *;
 
-
 .video {
   &__title {
-    // padding: 0 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 2rem;
+      font-weight: 700;
+    }
   }
   &__details {
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
-    // margin: 1rem;
     padding: 1rem 0 0 0;
+
+    @include tablet {
+      border: none;
+      border-bottom: 1px solid #e1e1e1;
+    }
   }
 
   &__description {
-    // padding: 0 1rem;
     font-size: 0.9rem;
   }
 }
@@ -23,33 +30,100 @@
 .content {
   & > * {
     font-size: 0.9rem;
-    margin: 0;
-    padding: 0;
-    width: 50%;
-    padding-bottom: 0.9rem;
-  }
-
-  &__views {
-    color: #afafaf;
-
-    &__image {
-      padding-right: 0.5rem;
-    }
-  }
-
-  &__likes {
-    color: #afafaf;
-
-    &__image {
-      padding-right: 0.5rem;
-    }
-  }
-
-  &__date {
-    color: #afafaf;
   }
 
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+
+      &__h4 {
+        margin: 0;
+        padding-right: 1rem;
+      }
+
+      &__date {
+        padding-right: 1rem;
+      }
+    }
+
+    &__h4 {
+      margin: 0;
+      padding-bottom: 1rem;
+    }
+
+    &__date {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__counters {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+
+      &__views {
+        &-count {
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    &__views {
+      padding-bottom: 1rem;
+      &-image {
+        padding-right: 0.8rem;
+      }
+
+      &-count {
+      }
+    }
+
+    &__likes {
+      padding-bottom: 1rem;
+      &-image {
+        padding-right: 0.8rem;
+      }
+
+      &-count {
+      }
+    }
+  }
+
+  .modifier {
+    color: #afafaf;
+  }
+
+  @include tablet {
+  }
 }
+
+// &__views {
+//   color: #afafaf;
+
+//   &__image {
+//     padding-right: 0.5rem;
+//   }
+// }
+
+// &__likes {
+//   color: #afafaf;
+
+//   &__image {
+//     padding-right: 0.5rem;
+//   }
+// }
+
+// &__date {
+//   color: #afafaf;
+// }
