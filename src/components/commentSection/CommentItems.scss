@@ -1,0 +1,36 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.review {
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+
+  &__image {
+    background-color: #e1e1e1;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 1rem 1rem 0 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1rem;
+
+      & > * {
+        margin: 0;
+      }
+    }
+  }
+}

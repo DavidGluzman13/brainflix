@@ -1,0 +1,55 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+
+.video {
+  &__title {
+    // padding: 0 1rem;
+  }
+  &__details {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    // margin: 1rem;
+    padding: 1rem 0 0 0;
+  }
+
+  &__description {
+    // padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.content {
+  & > * {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    padding-bottom: 0.9rem;
+  }
+
+  &__views {
+    color: #afafaf;
+
+    &__image {
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__likes {
+    color: #afafaf;
+
+    &__image {
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__date {
+    color: #afafaf;
+  }
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

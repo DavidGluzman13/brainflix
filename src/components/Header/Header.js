@@ -14,7 +14,6 @@ function Header() {
         <article className="header__searchdiv__article">
           <form className="search">
             <img className="search__logo" src={search} alt="search-logo" />
-            {/* put placeholder in scss */}
             <input
               className="search__input"
               id="searchBar"
@@ -23,13 +22,11 @@ function Header() {
             />
           </form>
         </article>
-        <article class="header__searchdiv__img">
-          <img
-            class="header__searchdiv__img--modifier"
-            src={img}
-            alt="Mohan-muruge looking left"
-          />
-        </article>
+        <img
+          class="header__searchdiv__img"
+          src={img}
+          alt="Mohan-muruge looking left"
+        />
       </div>
       <div className="header__buttondiv">
         <img

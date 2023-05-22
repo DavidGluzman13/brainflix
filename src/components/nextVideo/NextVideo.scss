@@ -1,8 +1,51 @@
-nav {
-  width: 30rem;
-  li {
-    img {
-      width: 100%;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/fonts" as *;
+
+.videoNav {
+  width: 100%;
+  padding: 0;
+  // padding: 0 1rem;
+  box-sizing: border-box;
+
+  &__heading {
+    font-size: 1rem;
+    color: #afafaf;
+  }
+  ul {
+    padding: 0;
+  }
+  &__li {
+    list-style: none;
+    padding: 0.5rem 0;
+    display: flex;
+    width: 100%;
+    max-width: 20rem;
+
+    // @include tablet {
+    //   width: 30%;
+    // }
+
+    &__image {
+      box-sizing: border-box;
+      width: 30%;
+      max-height: 3.6rem;
+      border-radius: 4px;
+      object-fit: cover;
+      flex: none;
+    }
+
+    &__subdiv {
+      padding: 0 0 0 1rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & > * {
+        margin: 0;
+        font-size: 0.9rem;
+      }
     }
   }
 }
