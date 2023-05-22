@@ -3,8 +3,6 @@
 @use "../../styles/partials/fonts" as *;
 
 .comment {
-  //put comment section styling
-  //   margin: 0 1rem;
   box-sizing: border-box;
 
   &__title {
@@ -15,6 +13,10 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+
+    @include tablet {
+      padding-bottom: 1rem;
+    }
 
     &-image {
       width: 2.5rem;
@@ -59,11 +61,13 @@
     }
 
     &-textarea {
+      border: 0;
+      outline: 0;
       width: 100%;
       height: 5rem;
       background-color: #fafafa;
       border-radius: 5px;
-      border-color: #e1e1e1;
+      border: 1px solid #e1e1e1;
       padding: 0.5rem 0 0 0.5rem;
       font-family: sans-serif;
       color: #323232;
@@ -75,6 +79,10 @@
       &::placeholder {
         position: absolute;
         top: 1;
+      }
+
+      &:focus {
+        border: 2px solid #0095ff;
       }
 
       @include tablet {
@@ -98,6 +106,11 @@
     border-radius: 5px;
     border: none;
     margin: 1rem 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #0065ad;
+    }
 
     &__icon {
       width: 1.2rem;

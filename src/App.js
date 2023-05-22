@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./app.scss";
 import Header from "./components/Header/Header";
 import VideoPlayer from "./components/Video/VideoPlayer";
@@ -31,12 +30,16 @@ function App() {
     <>
       <Header />
       <VideoPlayer className="VideoPlayer" selectedVideo={selectedVideo} />
-      <VideoDetails selectedVideo={selectedVideo} />
-      <CommentSection selectedVideo={selectedVideo} />
-      <NextVideo
-        filteredVideos={filteredVideos}
-        changeSelectedVideo={changeSelectedVideo}
-      />
+      <div className="menu">
+        <div className="menu__desktop-div">
+          <VideoDetails selectedVideo={selectedVideo} />
+          <CommentSection selectedVideo={selectedVideo} />
+        </div>
+        <NextVideo
+          filteredVideos={filteredVideos}
+          changeSelectedVideo={changeSelectedVideo}
+        />
+      </div>
     </>
   );
 }

@@ -56,10 +56,14 @@
       width: 100%;
       color: white;
 
+      &:hover {
+        cursor: pointer;
+        background-color: #0065ad;
+      }
+
       @include tablet {
         width: 10rem;
         height: 2.5rem;
-        
       }
 
       border-radius: 5px;
@@ -97,22 +101,32 @@
   }
 
   &__input {
+    border: 0;
+    outline: 0;
     border-radius: 5px;
-    height: 2.2rem;
+    height: 2.4rem;
     margin: 0;
     padding-left: 2rem;
     width: 100%;
-    border-color: #e1e1e1;
+    border: 1px solid #e1e1e1;
     background-color: #fafafa;
+    // position: relative;
 
     &::placeholder {
       font-size: 0.8rem;
+    }
+
+    &:focus {
+      border: 3px solid #0095ff;
     }
   }
 
   &__logo {
     position: absolute;
-    padding: 0.8rem;
+    //move the logo slightly to the right
+    left: 0.6rem;
+    top: 0.6rem;
     width: 1rem;
+    color: black;
   }
 }

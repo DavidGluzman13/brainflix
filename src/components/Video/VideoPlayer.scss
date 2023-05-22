@@ -2,13 +2,34 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/fonts" as *;
 
-.video {
-width:100%;
-margin: 0;
+.player {
+  margin: 0;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &__player {
-    width: 100%;
+  @include tablet {
     margin: 0;
+    background-color: #000000;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+  }
+
+  &__modifier {
+    width: 100vw;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    flex: none;
+
+    @include tablet {
+      width: 100%;
+      padding: 0 2rem;
+    }
+
+    @include desktop {
+      width: 70%;
+    }
   }
 }
-

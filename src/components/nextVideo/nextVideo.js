@@ -4,7 +4,7 @@ function NextVideo({ filteredVideos, changeSelectedVideo }) {
   return (
     <nav className="videoNav">
       <ul>
-        <h3 className="videoNav__heading">NEXT VIDEOS</h3>
+        <h4 className="videoNav__heading">NEXT VIDEOS</h4>
         {filteredVideos.map((video) => {
           return (
             <li
@@ -13,10 +13,14 @@ function NextVideo({ filteredVideos, changeSelectedVideo }) {
                 changeSelectedVideo(video.id);
               }}
               href="/"
-              // key="id"
+              key={video.id}
               // // fix the key id with demo slides
             >
-              <img src={video.image} className="videoNav__li__image"></img>
+              <img
+                src={video.image}
+                className="videoNav__li__image"
+                alt={video.title}
+              ></img>
               <div className="videoNav__li__subdiv">
                 <h3>{video.title}</h3>
                 <p>{video.channel}</p>

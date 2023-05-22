@@ -9,6 +9,7 @@
     @include tablet {
       font-size: 2rem;
       font-weight: 700;
+      margin-bottom: 0;
     }
   }
   &__details {
@@ -19,7 +20,11 @@
     @include tablet {
       border: none;
       border-bottom: 1px solid #e1e1e1;
+
+      
     }
+
+    
   }
 
   &__description {

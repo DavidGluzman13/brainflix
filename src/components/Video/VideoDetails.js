@@ -15,7 +15,7 @@ function VideoDetails({ selectedVideo }) {
       <div className="video__details">
         <div className="content">
           <div className="content__data">
-            <h4 className="content__data__h4">by {selectedVideo.channel}</h4>
+            <h4 className="content__data__h4">By {selectedVideo.channel}</h4>
             <span className="content__data__date modifier">{date}</span>
           </div>
           <div className="content__counters modifier">
