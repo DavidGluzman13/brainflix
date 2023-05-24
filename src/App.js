@@ -2,8 +2,8 @@ import "./app.scss";
 import Header from "./components/Header/Header";
 import VideoPlayer from "./components/Video/VideoPlayer";
 import VideoDetails from "./components/Video/VideoDetails";
-import CommentSection from "./components/CommentSection/CommentSection";
-import NextVideo from "./components/NextVideo/NextVideo";
+import CommentSection from "./components/commentSection/CommentSection";
+import NextVideo from "./components/nextVideo/NextVideo";
 import jsonVideosDetails from "./data/video-details.json";
 import jsonVideos from "./data/videos.json";
 import { useState } from "react";
@@ -28,7 +28,22 @@ function App() {
 
   return (
     <>
-      <Header />
+      <BrowserRouter>
+        <Header />
+        <Router>
+          <Route path="/" element={<HomePage />} />
+          <Route path="upload" element={<UploadPage  />} />
+          <Route path="/videos/:videoId" element={<HomePage />} />
+        </Router>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
+
+{
+  /* <Header />
       <VideoPlayer className="VideoPlayer" selectedVideo={selectedVideo} />
       <div className="menu">
         <div className="menu__desktop-div">
@@ -39,9 +54,5 @@ function App() {
           filteredVideos={filteredVideos}
           changeSelectedVideo={changeSelectedVideo}
         />
-      </div>
-    </>
-  );
+      </div> */
 }
-
-export default App;

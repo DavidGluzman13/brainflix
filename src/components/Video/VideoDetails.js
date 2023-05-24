@@ -1,6 +1,9 @@
 import "./VideoDetails.scss";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
+import axios from "axios";
+import { useEffec, useState } from "react";
+
 // import the icons
 
 // if (!video) {
@@ -8,6 +11,10 @@ import likesIcon from "../../assets/icons/likes.svg";
 // }
 
 function VideoDetails({ selectedVideo }) {
+  
+
+
+
   const date = new Date(selectedVideo.timestamp).toLocaleDateString();
   return (
     <section className="video">
