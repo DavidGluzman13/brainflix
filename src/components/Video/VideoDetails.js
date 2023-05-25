@@ -2,7 +2,7 @@ import "./VideoDetails.scss";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 import axios from "axios";
-import { useEffec, useState } from "react";
+import { useEffect, useState } from "react";
 
 // import the icons
 
