@@ -6,7 +6,6 @@ function NextVideo({ filteredVideos }) {
     <nav className="videoNav">
       <ul>
         <h4 className="videoNav__heading">NEXT VIDEOS</h4>
-        <li href="/:videoId"></li>
         {filteredVideos.map((video) => {
           return (
             <Link to={`/videos/${video.id}`} key={video.id}>

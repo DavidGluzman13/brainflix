@@ -1,8 +1,17 @@
 import image from "../../assets/images/Upload-video-preview.jpg";
 import { Link } from "react-router-dom";
 import upload from "../../assets/icons/upload.svg";
+import { useNavigate } from "react-router-dom";
 
 function UploadPage() {
+  const navigate = useNavigate();
+
+  function alertSubmit(e) {
+    e.preventDefault();
+    alert("Uploaded");
+    navigate("/");
+  }
+
   return (
     <>
       <h1>Upload Page</h1>
@@ -15,7 +24,7 @@ function UploadPage() {
             alt="Bicycle-stear"
           />
         </div>
-        <form>
+        <form onSubmit={alertSubmit}>
           <div className="content__form">
             <label className="content__form__label">
               TITLE YOUR VIDEO
@@ -34,16 +43,14 @@ function UploadPage() {
               />
             </label>
           </div>
-          <Link to="/">
-            <button className="header__searchdiv__button">
-              <img
-                className="header__searchdiv__button__icon"
-                src={upload}
-                alt="upload-icon"
-              />
-              <p className="header__searchdiv__button__text">PUBLISH</p>
-            </button>
-          </Link>
+          <button className="header__searchdiv__button">
+            <img
+              className="header__searchdiv__button__icon"
+              src={upload}
+              alt="upload-icon"
+            />
+            <p className="header__searchdiv__button__text">PUBLISH</p>
+          </button>
         </form>
       </div>
     </>
