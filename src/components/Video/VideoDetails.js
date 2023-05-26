@@ -1,10 +1,6 @@
 import "./VideoDetails.scss";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { getVideoEndpoint } from "../../utils/api";
-import HomePage from "../../pages/HomePage/HomePage";
 
 function VideoDetails({ currentVideo}) {
 
