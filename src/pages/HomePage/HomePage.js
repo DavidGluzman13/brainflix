@@ -11,6 +11,7 @@ import { getVideoEndpoint } from "../../utils/api";
 function HomePage({ videoList }) {
   const param = useParams();
   const videoId = param.id;
+  //passing to all children
   const [currentVideo, setVideo] = useState(null);
 
   useEffect(() => {
@@ -24,10 +25,8 @@ function HomePage({ videoList }) {
   }
   console.log(currentVideo);
 
-  //TODO: Remove selected video from videos before
   // passing to <NextVideo>
   const filteredVideos = videoList.filter((video) => {
-    //videos was originally videoList
     return video.id !== videoId;
   });
 
