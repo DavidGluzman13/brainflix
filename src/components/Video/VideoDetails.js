@@ -3,26 +3,20 @@ import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { getVideoEndpoint } from "../../utils/api";
+import HomePage from "../../pages/HomePage/HomePage";
 
-// import the icons
-
-// if (!video) {
-//   return <h1>Not Found</h1>;
-// }
-
-function VideoDetails({ selectedVideo }) {
-  
+function VideoDetails({ currentVideo}) {
 
 
-
-  const date = new Date(selectedVideo.timestamp).toLocaleDateString();
+  const date = new Date(currentVideo.timestamp).toLocaleDateString();
   return (
     <section className="video">
-      <h1 className="video__title">{selectedVideo.title}</h1>
+      <h1 className="video__title">{currentVideo.title}</h1>
       <div className="video__details">
         <div className="content">
           <div className="content__data">
-            <h4 className="content__data__h4">By {selectedVideo.channel}</h4>
+            <h4 className="content__data__h4">By {currentVideo.channel}</h4>
             <span className="content__data__date modifier">{date}</span>
           </div>
           <div className="content__counters modifier">
@@ -33,7 +27,7 @@ function VideoDetails({ selectedVideo }) {
                 alt="views eye icon"
               />
               <span className="content__counters__views-count">
-                {selectedVideo.views}
+                {currentVideo.views}
               </span>
             </div>
             <div className="content__counters__likes">
@@ -43,13 +37,13 @@ function VideoDetails({ selectedVideo }) {
                 alt="likes heart icon"
               />
               <span className="content__counters__likes-count">
-                {selectedVideo.likes}
+                {currentVideo.likes}
               </span>
             </div>
           </div>
         </div>
       </div>
-      <p className="video__description">{selectedVideo.description}</p>
+      <p className="video__description">{currentVideo.description}</p>
     </section>
   );
 }

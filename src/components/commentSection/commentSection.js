@@ -1,16 +1,14 @@
 import "./CommentSection.scss";
-import comments from "../../data/video-details.json";
 import CommentItems from "./CommentItems";
 import avatarIcon from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
-import { useState } from "react";
 
-export default function CommentSection({ selectedVideo }) {
+export default function CommentSection({ currentVideo }) {
   return (
     <div>
       <main className="comment">
         <h4 className="comment__title">
-          {selectedVideo.comments.length} Comments
+          {currentVideo.comments.length} Comments
         </h4>
         <div className="comment__container">
           <img
@@ -41,7 +39,7 @@ export default function CommentSection({ selectedVideo }) {
         </div>
         <div className="comment-list">
           {" "}
-          {selectedVideo.comments.map((comment) => {
+          {currentVideo.comments.map((comment) => {
             const date = new Date(comment.timestamp).toLocaleDateString();
             return (
               <CommentItems

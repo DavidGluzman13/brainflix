@@ -1,13 +1,13 @@
 import "./VideoPlayer.scss";
 
-function VideoPlayer({ selectedVideo }) {
+function VideoPlayer({ currentVideo }) {
   return (
     <div className="player tablet-player">
       <video
         src=""
         className="player__modifier"
         controls
-        poster={selectedVideo.image}
+        poster={currentVideo.image}
       ></video>
     </div>
   );
