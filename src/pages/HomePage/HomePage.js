@@ -23,7 +23,6 @@ function HomePage({ videoList }) {
   if (!currentVideo) {
     return <h1>LOADING...</h1>;
   }
-  console.log(currentVideo);
 
   // passing to <NextVideo>
   const filteredVideos = videoList.filter((video) => {

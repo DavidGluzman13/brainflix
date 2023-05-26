@@ -1,5 +1,4 @@
 import "./NextVideo.scss";
-// import { getVideosEndpoint } from "../../utils/api";
 import { Link } from "react-router-dom";
 
 function NextVideo({ filteredVideos }) {
