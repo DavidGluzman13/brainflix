@@ -35,7 +35,6 @@ function HomePage({ videoList }) {
       <div className="menu">
         <div className="menu__desktop-div">
           <VideoDetails currentVideo={currentVideo} />
-          {/* <VideoDetails selectedVideo={selectedVideo} /> */}
           <CommentSection currentVideo={currentVideo} />
         </div>
         <NextVideo filteredVideos={filteredVideos} />

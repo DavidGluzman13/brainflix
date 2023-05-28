@@ -26,16 +26,14 @@ function Header() {
           src={img}
           alt="Mohan-muruge looking left"
         />
-        <Link to="/Upload">
-          <button className="header__searchdiv__button">
-            <img
-              className="header__searchdiv__button__icon"
-              href=""
-              src={upload}
-              alt="upload-icon"
-            />
-            <p className="header__searchdiv__button__text">UPLOAD</p>
-          </button>
+        <Link className="header__searchdiv__button" to="/Upload">
+          <img
+            className="header__searchdiv__button__icon"
+            href=""
+            src={upload}
+            alt="upload-icon"
+          />
+          <p className="header__searchdiv__button__text">UPLOAD</p>
         </Link>
       </div>
     </header>
