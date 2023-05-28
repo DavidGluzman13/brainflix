@@ -1,7 +1,7 @@
 import VideoPlayer from "../../components/Video/VideoPlayer";
 import VideoDetails from "../../components/Video/VideoDetails";
-import CommentSection from "../../components/CommentSection/CommentSection";
-import NextVideo from "../../components/NextVideo/NextVideo";
+import CommentSection from "../../components/commentSection/CommentSection";
+import NextVideo from "../../components/nextVideo/NextVideo";
 import "./HomePage.scss";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
