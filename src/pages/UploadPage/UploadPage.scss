@@ -5,3 +5,191 @@
 * {
   font-family: AvenirNextLTPro-Regular;
 }
+
+.upload-page {
+  border-top: 1px solid #e1e1e1;
+  margin: 0;
+}
+.header {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-family: AvenirNextLTPro-Regular;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.content {
+  display: flex;
+
+  &__image-container {
+    &__heading {
+      color: #afafaf;
+      font-size: 0.8rem;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      object-fit: cover;
+      height: auto;
+
+      @include tablet {
+        width: 50%;
+      }
+
+      @include desktop {
+        width: 30%;
+        box-sizing: border-box;
+        object-fit: cover;
+        // flex: none;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem 0;
+
+    @include tablet {
+      flex-direction: row;
+      margin: 1rem 0;
+      justify-content: space-between;
+    }
+
+    &__label {
+      color: #afafaf;
+      font-size: 0.8rem;
+      font-weight: 600;
+      width: 100%;
+      padding-top: 1rem;
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        padding-right: 1rem;
+      }
+    }
+
+    &__input {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      height: 5rem;
+      background-color: #fafafa;
+      border-radius: 5px;
+      border: 1px solid #e1e1e1;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0 0 0.5rem;
+      font-family: sans-serif;
+      color: #323232;
+      box-sizing: border-box;
+
+      padding-bottom: 5rem;
+      position: relative;
+
+      &::placeholder {
+        position: absolute;
+        color: #323232;
+        top: 1;
+      }
+
+      &:focus {
+        border: 2px solid #0095ff;
+      }
+
+      @include tablet {
+        padding-bottom: 0;
+        height: 2.2rem;
+        width: 30rem;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+
+    @include tablet {
+      flex-direction: row;
+      margin: 1rem 0;
+      justify-content: space-between;
+    }
+
+    &__publish-button {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: 2.2rem;
+      padding: 0.8rem;
+      background-color: #0095ff;
+      width: 100%;
+      color: white;
+      order: -1;
+
+      border-radius: 5px;
+      border: none;
+      margin: 1rem 0;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #0065ad;
+      }
+
+      &__icon {
+        width: 1.2rem;
+      }
+
+      &__text {
+        font-size: 0.8rem;
+        font-weight: 400;
+        width: 100%;
+        margin: 0;
+      }
+
+      @include tablet {
+        height: 2.2rem;
+        width: 10rem;
+        align-self: flex-end;
+        margin: 0;
+        order: 1;
+      }
+    }
+
+    &__cancel-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2.2rem;
+      padding: 0.8rem;
+      background-color: #ffffff;
+      width: 100%;
+      color: #0095ff;
+      border: none;
+      font-weight: 600;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #0065ad;
+      }
+
+      @include tablet {
+        height: 2.2rem;
+        width: 10rem;
+        align-self: flex-end;
+        margin: 0;
+        order: 1;
+      }
+    }
+  }
+}

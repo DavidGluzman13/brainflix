@@ -1,6 +1,7 @@
 import image from "../../assets/images/Upload-video-preview.jpg";
 import upload from "../../assets/icons/upload.svg";
 import { useNavigate } from "react-router-dom";
+import "./UploadPage.scss";
 
 function UploadPage() {
   const navigate = useNavigate();
@@ -12,11 +13,11 @@ function UploadPage() {
   }
 
   return (
-    <>
+    <div className="upload-page">
       <h1>Upload Page</h1>
       <div className="content">
         <div className="content__image-container">
-          <h4>VIDEO THUMBNAIL</h4>
+          <h4 className="content__image-container__heading">VIDEO THUMBNAIL</h4>
           <img
             src={image}
             className="content__image-container__image"
@@ -42,18 +43,20 @@ function UploadPage() {
               />
             </label>
           </div>
-          <button className="header__searchdiv__button">
-            <img
-              className="header__searchdiv__button__icon"
-              src={upload}
-              alt="upload-icon"
-            />
-            <p className="header__searchdiv__button__text">PUBLISH</p>
-          </button>
-          <button>CANCEL</button>
+          <div className="content__buttons">
+            <button className="content__buttons__cancel-button">CANCEL</button>
+            <button className="content__buttons__publish-button">
+              <img
+                className="content__buttons__publish-button__icon"
+                src={upload}
+                alt="upload-icon"
+              />
+              <p className="content__buttons__publish-button__text">PUBLISH</p>
+            </button>
+          </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 
