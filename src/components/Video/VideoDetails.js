@@ -18,21 +18,21 @@ function VideoDetails({ currentVideo}) {
           <div className="content__counters modifier">
             <div className="content__counters__views">
               <img
-                className="content__counters__views-image"
+                className="content__counters__views__image"
                 src={viewsIcon}
                 alt="views eye icon"
               />
-              <span className="content__counters__views-count">
+              <span className="content__counters__views__count">
                 {currentVideo.views}
               </span>
             </div>
             <div className="content__counters__likes">
               <img
-                className="content__counters__likes-image"
+                className="content__counters__likes__image"
                 src={likesIcon}
                 alt="likes heart icon"
               />
-              <span className="content__counters__likes-count">
+              <span className="content__counters__likes__count">
                 {currentVideo.likes}
               </span>
             </div>

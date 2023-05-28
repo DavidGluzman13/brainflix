@@ -20,15 +20,16 @@
     @include tablet {
       border: none;
       border-bottom: 1px solid #e1e1e1;
-
-      
     }
-
-    
   }
 
   &__description {
     font-size: 0.9rem;
+
+    @include desktop {
+      padding-bottom: 2rem;
+      line-height: 1.2rem;
+    }
   }
 }
 
@@ -78,7 +79,7 @@
       align-items: center;
 
       &__views {
-        &-count {
+        &__count {
           padding-right: 1rem;
         }
       }
@@ -86,21 +87,15 @@
 
     &__views {
       padding-bottom: 1rem;
-      &-image {
+      &__image {
         padding-right: 0.8rem;
-      }
-
-      &-count {
       }
     }
 
     &__likes {
       padding-bottom: 1rem;
-      &-image {
+      &__image {
         padding-right: 0.8rem;
-      }
-
-      &-count {
       }
     }
   }
@@ -112,23 +107,3 @@
   @include tablet {
   }
 }
-
-// &__views {
-//   color: #afafaf;
-
-//   &__image {
-//     padding-right: 0.5rem;
-//   }
-// }
-
-// &__likes {
-//   color: #afafaf;
-
-//   &__image {
-//     padding-right: 0.5rem;
-//   }
-// }
-
-// &__date {
-//   color: #afafaf;
-// }
