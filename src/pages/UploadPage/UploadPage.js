@@ -1,5 +1,4 @@
 import image from "../../assets/images/Upload-video-preview.jpg";
-import { Link } from "react-router-dom";
 import upload from "../../assets/icons/upload.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -51,6 +50,7 @@ function UploadPage() {
             />
             <p className="header__searchdiv__button__text">PUBLISH</p>
           </button>
+          <button>CANCEL</button>
         </form>
       </div>
     </>

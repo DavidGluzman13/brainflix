@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <header class="header">
+    <header className="header">
       <Link to="/">
         <img src={logo} alt="BrainFlix-logo" />
       </Link>
@@ -22,7 +22,7 @@ function Header() {
           />
         </form>
         <img
-          class="header__searchdiv__img"
+          className="header__searchdiv__img"
           src={img}
           alt="Mohan-muruge looking left"
         />
