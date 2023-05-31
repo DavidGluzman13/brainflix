@@ -18,11 +18,11 @@ function App() {
     });
   }, [videoList]);
 
-  // catch error 
+  // catch error
   if (!videoList) {
     return <h1>Didn't find videos...</h1>;
   }
- 
+
   //defining the first video ID from the videoList
   const firstVideoId = videoList[0].id;
 
