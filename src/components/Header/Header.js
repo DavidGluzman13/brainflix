@@ -40,7 +40,4 @@ function Header() {
   );
 }
 
-//move the button img to be inside
-// move the entire button to be in the same div as the search and avatar
-
 export default Header;

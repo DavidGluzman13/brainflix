@@ -3,13 +3,11 @@ import CommentItems from "./CommentItems";
 import avatarIcon from "../../assets/images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/icons/add_comment.svg";
 
-export default function CommentSection({ currentVideo }) {
+export default function CommentSection({ comments }) {
   return (
     <div>
       <main className="comment">
-        <h4 className="comment__title">
-          {currentVideo.comments.length} Comments
-        </h4>
+        <h4 className="comment__title">{comments.length} Comments</h4>
         <div className="comment__container">
           <img
             className="comment__container-image"
@@ -39,7 +37,7 @@ export default function CommentSection({ currentVideo }) {
         </div>
         <div className="comment-list">
           {" "}
-          {currentVideo.comments.map((comment) => {
+          {comments.map((comment) => {
             const date = new Date(comment.timestamp).toLocaleDateString();
             return (
               <CommentItems

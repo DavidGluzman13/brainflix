@@ -1,7 +1,7 @@
 import VideoPlayer from "../../components/Video/VideoPlayer";
 import VideoDetails from "../../components/Video/VideoDetails";
-import CommentSection from "../../components/commentSection/CommentSection";
-import NextVideo from "../../components/nextVideo/NextVideo";
+import CommentSection from "../../components/CommentSection/CommentSection";
+import NextVideo from "../../components/NextVideo/NextVideo";
 import "./HomePage.scss";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -15,9 +15,14 @@ function HomePage({ videoList }) {
   const [currentVideo, setVideo] = useState(null);
 
   useEffect(() => {
-    axios.get(getVideoEndpoint(videoId)).then((response) => {
-      setVideo(response.data);
-    });
+    axios
+      .get(getVideoEndpoint(videoId))
+      .then((response) => {
+        setVideo(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [videoId]);
 
   if (!currentVideo) {
@@ -35,7 +40,7 @@ function HomePage({ videoList }) {
       <div className="menu">
         <div className="menu__desktop-div">
           <VideoDetails currentVideo={currentVideo} />
-          <CommentSection currentVideo={currentVideo} />
+          <CommentSection comments={currentVideo.comments} />
         </div>
         <NextVideo filteredVideos={filteredVideos} />
       </div>
@@ -44,4 +49,3 @@ function HomePage({ videoList }) {
 }
 
 export default HomePage;
-
