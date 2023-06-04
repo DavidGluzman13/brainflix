@@ -1,6 +1,6 @@
 import VideoPlayer from "../../components/Video/VideoPlayer";
 import VideoDetails from "../../components/Video/VideoDetails";
-import CommentSection from "../../components/CommentSection/CommentSection";
+import CommentSection from "../../components/CommentSection/commentSection";
 import NextVideo from "../../components/NextVideo/NextVideo";
 import "./HomePage.scss";
 import { useParams } from "react-router-dom";
