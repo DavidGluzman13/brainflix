@@ -15,9 +15,14 @@ function HomePage({ videoList }) {
   const [currentVideo, setVideo] = useState(null);
 
   useEffect(() => {
-    axios.get(getVideoEndpoint(videoId)).then((response) => {
-      setVideo(response.data);
-    });
+    axios
+      .get(getVideoEndpoint(videoId))
+      .then((response) => {
+        setVideo(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [videoId]);
 
   if (!currentVideo) {
@@ -35,7 +40,7 @@ function HomePage({ videoList }) {
       <div className="menu">
         <div className="menu__desktop-div">
           <VideoDetails currentVideo={currentVideo} />
-          <CommentSection currentVideo={currentVideo} />
+          <CommentSection comments={currentVideo.comments} />
         </div>
         <NextVideo filteredVideos={filteredVideos} />
       </div>

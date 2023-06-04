@@ -13,37 +13,37 @@ function App() {
 
   //Getting the raw video data from the API_URL
   useEffect(() => {
-    axios.get(getVideosEndpoint).then((response) => {
-      setVideoList(response.data);
-    });
-  }, [videoList]);
+    axios
+      .get(getVideosEndpoint)
+      .then((response) => {
+        setVideoList(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-  // catch error 
+  // catch error
   if (!videoList) {
     return <h1>Didn't find videos...</h1>;
   }
- 
+
   //defining the first video ID from the videoList
   const firstVideoId = videoList[0].id;
 
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          {/* Redirecting anytime if landed on the "/" path, to HomePage with either the default ID or the new ID */}
-          <Route
-            path="/"
-            element={<Navigate to={`/videos/${firstVideoId}`} />}
-          />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route
-            path="/videos/:id"
-            element={<HomePage videoList={videoList} />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        {/* Redirecting anytime if landed on the "/" path, to HomePage with either the default ID or the new ID */}
+        <Route path="/" element={<Navigate to={`/videos/${firstVideoId}`} />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route
+          path="/videos/:id"
+          element={<HomePage videoList={videoList} />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
